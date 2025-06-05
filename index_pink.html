@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>兒童飲食週計畫打卡表</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background-color: #fce4ec;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d81b60;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f8bbd0;
+    }
+
+    th > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .emoji {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .weekday {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .emoji-rating {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .emoji-rating button {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .emoji-rating button:hover {
+      transform: scale(1.2);
+    }
+
+    .print-button {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #d81b60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .print-button:hover {
+      background-color: #c2185b;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .emoji {
+        font-size: 1.5rem;
+      }
+
+      th, td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media print {
+      .print-button {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      .container {
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🍱 兒童飲食週計畫打卡表</h1>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th><div><span class="emoji">🗓️</span>星期</div></th>
+            <th><div><span class="emoji">🍚</span>主食</div></th>
+            <th><div><span class="emoji">🥦</span>蔬菜</div></th>
+            <th><div><span class="emoji">🍎</span>水果</div></th>
+            <th><div><span class="emoji">🍗</span>蛋白質</div></th>
+            <th><div><span class="emoji">🥛</span>乳製品</div></th>
+            <th><div><span class="emoji">😄😐😞</span>自評表情</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="weekday">🌞 星期日</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="weekday">🌙 星期一</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="weekday">💧 星期二</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="weekday">🔥 星期三</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="weekday">🍀 星期四</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="weekday">✨ 星期五</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="weekday">🌍 星期六</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button class="print-button" onclick="window.print()">🖨️ 列印此頁</button>
+  </div>
+</body>
+</html>
